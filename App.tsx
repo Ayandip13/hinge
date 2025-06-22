@@ -1,11 +1,13 @@
 import { View, Text } from 'react-native';
 import React from 'react';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import StackNavigator from './navigation/StackNavigator';
 
 const App = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>App</Text>
-    </View>
+    <>
+      <StackNavigator />
+    </>
   );
 };
 
