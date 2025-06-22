@@ -19,21 +19,25 @@ const StackNavigator = () => {
 
   function BottomTabs() {
     return (
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={() => ({
+          // tabBarShowLabel: false,
+        })}
+      >
         <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{
-            tabBarStyle: { backgroundColor: '#101010' },
-            tabBarLabelStyle: { color: '#008397' },
+            tabBarStyle: { backgroundColor: '#101010', height: 80 },
+            tabBarLabelStyle: { color: '#008397', fontSize: 15 },
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <MaterialCommunityIcons name="alpha" size={26} color="#fff" />
+                <MaterialCommunityIcons name="alpha" size={28} color="#fff" />
               ) : (
                 <MaterialCommunityIcons
                   name="alpha"
-                  size={20}
+                  size={24}
                   color="#989898"
                 />
               ),
@@ -43,14 +47,14 @@ const StackNavigator = () => {
           name="Likes"
           component={LikeScreen}
           options={{
-            tabBarStyle: { backgroundColor: '#101010' },
-            tabBarLabelStyle: { color: '#008397' },
+            tabBarStyle: { backgroundColor: '#101010', height: 80 },
+            tabBarLabelStyle: { color: '#008397', fontSize: 15 },
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <Entypo name="heart" size={26} color="#fff" />
+                <Entypo name="heart" size={28} color="#fff" />
               ) : (
-                <Entypo name="heart" size={20} color="#989898" />
+                <Entypo name="heart" size={24} color="#989898" />
               ),
           }}
         />
@@ -58,20 +62,20 @@ const StackNavigator = () => {
           name="Chat"
           component={ChatScreen}
           options={{
-            tabBarStyle: { backgroundColor: '#101010' },
-            tabBarLabelStyle: { color: '#008397' },
+            tabBarStyle: { backgroundColor: '#101010', height: 80 },
+            tabBarLabelStyle: { color: '#008397', fontSize: 15 },
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
                 <MaterialIcons
                   name="chat-bubble-outline"
-                  size={26}
+                  size={28}
                   color="#fff"
                 />
               ) : (
                 <MaterialIcons
                   name="chat-bubble-outline"
-                  size={20}
+                  size={24}
                   color="#989898"
                 />
               ),
@@ -81,16 +85,16 @@ const StackNavigator = () => {
           name="Profile"
           component={ProfileScreen}
           options={{
-            tabBarStyle: { backgroundColor: '#101010' },
-            tabBarLabelStyle: { color: '#008397' },
+            tabBarStyle: { backgroundColor: '#101010', height: 80 },
+            tabBarLabelStyle: { color: '#008397', fontSize: 15 },
             headerShown: false,
             tabBarIcon: ({ focused }) =>
               focused ? (
-                <Ionicons name="person-circle-outline" size={26} color="#fff" />
+                <Ionicons name="person-circle-outline" size={28} color="#fff" />
               ) : (
                 <Ionicons
                   name="person-circle-outline"
-                  size={20}
+                  size={26}
                   color="#989898"
                 />
               ),
@@ -114,7 +118,7 @@ const StackNavigator = () => {
 
   return (
     <NavigationContainer>
-        <MainStack/>
+      <MainStack />
     </NavigationContainer>
   );
 };
